@@ -1,0 +1,25 @@
+
+<h1>Policy Detail:</h1>
+<p *ngIf="!forms | async as courses else noData"><em>Loading...</em></p>
+<li *ngFor="let form1 of forms">{{form1.title}}</li>
+<table class='table' *ngIf="forms">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Form</th>
+        <th>Purpose</th>
+        <th>Reference</th>
+        <th>Sort Order f</th>
+    </tr>
+    </thead>
+    <tbody>
+     
+        <tr *ngFor="let form1 of forms">
+            <td>{{ form1.title }}</td>
+            <td>{{ form1.form }}</td>
+            <td>{{ form1.purpose }}</td>
+            <td>{{ form1.reference }}</td>
+            <td>{{ form1.sortOrder }}</td>
+        </tr>
+    </tbody>
+</table>
